@@ -1,0 +1,56 @@
+<div class="private-album-login-main"></div>
+<div class="private-album-login">
+
+  <div class="title"><%= @album.title %></div>
+  <div class="owner"><%= @album.owner.business_name %></div>
+
+  <div class="info">
+    <% if flash[:errors] %>
+      <% flash[:errors].each do |error| %>
+        <span class="error_message"><%= error %></span><br>
+      <% end %>
+    <% else %>
+      <span class="bold-guest">Guest Access.</span> Enter password to view this collection.
+    <% end %>
+  </div>
+
+  <form class="form-album" action="<%= album_sessions_url %>" method="POST">
+    <input type="hidden" name="router" value="<%= params[:router] %>">
+    <input type="hidden" name="album[id]" value="<%= params[:album] %>">
+    <input type="password" class="guest-login-password" name="album[password]" placeholder="password"><br>
+    <input type="Submit" class="guest-login-enter" value="Enter">
+  </form>
+</div>
+<style type="text/css">
+  <% if @album.cover_image %>
+    <% bg_image = @album.cover_image.image_url %>
+  <% else %>
+    <% bg_image = 'http://res.cloudinary.com/twinkieset/image/upload/v1434583156/Screen_Shot_2015-06-17_at_4.18.43_PM_uptlhi.png' %>
+  <% end %>
+
+  .private-album-login-main {
+    background-image: url('<%= bg_image %>');
+  }
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function (){
+    if (window.location.search === "?album=1&router=1/collection/1") {
+      setTimeout(function () {
+        $('.guest-login-password').val("4");
+      }, 1000);
+      setTimeout(function () {
+        $('.guest-login-password').val("44");
+      }, 1500);
+      setTimeout(function () {
+        $('.guest-login-password').val("444");
+      }, 2000);
+      setTimeout(function () {
+        $('.guest-login-password').val("4444");
+      }, 2500);
+      setTimeout(function () {
+        $('.form-album').submit();
+      }, 3000);
+    }
+  })
+</script>

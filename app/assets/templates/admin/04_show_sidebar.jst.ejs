@@ -1,0 +1,17 @@
+<div class="title"><%= album.escape('title') %> &nbsp;<i class="fa fa-pencil edit-album-button"></i></div>
+<span class="event_date"><%= album.escape('string_date') %></span>
+<span class="status"><%= album.escape('status') %></span>
+
+<div class="collection-cover-image"></div>
+
+<div class="album-show-sidebar-subalbums-header">Photos</div>
+<ul class="album-show-subalbums"></ul>
+
+<button class="new-set-button"><i class="fa fa-plus"></i>&nbsp;&nbsp; Add Set</button>
+
+<div class="view-share">
+  <button class="view-album">
+    <i class="fa fa-eye"></i> View
+  </button>
+  <button class='share-collection-button'><i class="fa fa-share"></i> Share</button>
+</div>

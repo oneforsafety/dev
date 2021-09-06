@@ -1,0 +1,26 @@
+<a href="/"><img src="http://images.karenling.net/aa/top_left_logo.png" width="60px" class="admin-nav-logo"></a>
+
+<a href="#" class="albums-title"><i class="fa fa-th-large fa-lg"></i> &nbsp;Collections</a>
+
+<div class="user-buttons"><i class="fa fa-user fa-lg"></i> &nbsp; <%= user.get('email') %> <span class="caret "></span></div>
+
+<ul class="user-dropdown">
+  <div class="point-border"></div>
+  <div class="point"></div>
+  <li class="user-profile"><i class="fa fa-user fa-fw user-icon"></i> My Profile</li>
+  <li class="change-password"><i class="fa fa-lock fa-fw user-icon"></i> Change Password</li>
+  <li class='spacer'></li>
+  <li class="homepage">
+    <a href="users#<%= CURRENT_USER.id %>" target="_new">
+      <i class="fa fa-home fa-fw user-icon"></i> My Homepage
+    </a>
+  </li>
+  <li class='spacer'></li>
+  <li class="logout"><i class="fa fa-power-off fa-fw user-icon"></i> Logout</li>
+</ul>
+
+
+<form action="/session" method="post" class="logout-form">
+  <input type="hidden" name="_method" value="delete">
+  <input value="Logout" type="submit"/>
+</form>

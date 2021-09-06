@@ -1,0 +1,19 @@
+<div class="container guest-album-index">
+  <div class="row-fluid">
+    <div class="user-avatar-title">
+      <% if (owner.escape('avatar')) { %>
+        <div class="user-avatar">
+          <img src="<%= owner.escape('avatar') %>">
+        </div>
+      <% } %>
+      <div class="span12 title">
+        <a href="<%= owner.escape('website') %>"><%= owner.escape("business_name") %></a>
+      </div>
+    </div>
+
+  <div class="row-fluid albums-container"></div>
+
+  <div class="row-fluid footer">
+    <footer>© <%= owner.escape("business_name") %></footer>
+  </div>
+</div>

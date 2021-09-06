@@ -1,0 +1,112 @@
+<div class="container-fluid design-examples">
+  <div class="designed-to-impress">Designed To Impress</div>
+  <div class="design-tagline">Dedicated online photo gallery for each of your clients, with beautiful cover and layout right out of the box.</div>
+
+  <div class="desktop-options group">
+    <div class="selected beautiful-design">Beautiful Design</div>
+    <div class="gallery-design">The Gallery</div>
+    <div class="space-design">Your Space</div>
+  </div>
+
+  <div class="desktop">
+    <img src="http://images.karenling.net/aa/desktop-image.png" class="computer">
+    <img src="http://images.karenling.net/aa/desktop-beautiful.png" class="desktop-screen beautiful">
+    <img src="http://images.karenling.net/aa/desktop-gallery.png" class="desktop-screen gallery">
+    <img src="http://images.karenling.net/aa/desktop-your.png" class="desktop-screen your">
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var topOfDesignExamples = $('.design-examples').offset().top;
+    var topOfAlbumExamples =  $('.example-albums').offset().top;
+    var topOfBottomInfo =  $('.bottom-info').offset().top;
+    $(window).resize(function () {
+      var windowHeight = $(window).height();
+      var splashHeight = $('.splash').height();
+      $('.design-examples, .example-albums, .bottom-info').height(splashHeight);
+
+      $('.design-examples').css('top', splashHeight);
+      $('.example-albums').css('top', splashHeight*2);
+      $('.bottom-info').css('top', splashHeight*3);
+
+      $('.create-first').height(splashHeight-244);
+
+      $('.example-albums .header').height(splashHeight-350);
+      if ($(window).width() < 825) {
+        $('.screenshot').width('400px');
+        $('.user-item').addClass('collapse');
+      } else if ($(window).width() < 1043) {
+        $('.user-item').removeClass('collapse');
+        $('.screenshot').width('100%');
+      } else {
+        $('.screenshot').width('300px');
+      }
+
+      topOfDesignExamples = $('.design-examples').offset().top;
+      topOfAlbumExamples =  $('.example-albums').offset().top;
+      topOfBottomInfo =  $('.bottom-info').offset().top;
+
+      $(".welcome-link").click(function() {
+        $('html, body').animate({
+          scrollTop: 0
+        }, 2000);
+      });
+
+      $(".design-link").click(function() {
+        $('html, body').animate({
+          scrollTop: topOfDesignExamples - 25
+        }, 2000);
+      });
+
+      $(".examples-link").click(function() {
+        $('html, body').animate({
+          scrollTop: topOfAlbumExamples
+        }, 2000);
+      });
+    });
+    $(window).resize();
+
+    $(window).scroll(function () {
+
+      var currentPos = $('body').scrollTop();
+      if (currentPos < topOfDesignExamples - 100) {
+        $('.splash-navbar').fadeOut('fast');
+        $('.options li').removeClass('current');
+        $('.welcome-link').addClass('current');
+      } else if (currentPos < topOfAlbumExamples) {
+        $('.splash-navbar').fadeIn();
+        $('.options li').removeClass('current');
+        $('.design-link').addClass('current');
+      } else {
+        $('.options li').removeClass('current');
+        $('.examples-link').addClass('current');
+      }
+    });
+
+    $(window).scroll();
+
+    $('.beautiful').hide();
+
+    $('.beautiful-design').on('mouseover', function () {
+      $('.beautiful, .gallery, .your').hide();
+      $('.beautiful').fadeIn();
+      $('.desktop-options > div').removeClass('selected');
+      $('.beautiful-design').addClass('selected');
+    })
+
+    $('.gallery-design').on('mouseover', function () {
+      $('.beautiful, .gallery, .your').hide();
+      $('.gallery').fadeIn();
+      $('.desktop-options > div').removeClass('selected');
+      $('.gallery-design').addClass('selected');
+    });
+
+    $('.space-design').on('mouseover', function () {
+      $('.beautiful, .gallery, .your').hide();
+      $('.your').fadeIn();
+      $('.desktop-options > div').removeClass('selected');
+      $('.space-design').addClass('selected');
+    });
+  });
+</script>

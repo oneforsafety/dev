@@ -1,0 +1,35 @@
+<div class="form-container edit-album-form">
+  <button title="Close (Esc)" type="button" class="close-view">×</button>
+  <div class="title">Edit Collection</div>
+
+  <form class="form-group">
+    <div class="errors"></div>
+    <input id="album-status" class="form-control" type="hidden" name="album[status]" value="<%= album.escape('status') %>">
+
+    <label for="album-title">Collection Name</label>
+    <input id="album-title" class="form-control" type="text" name="album[title]" value="<%= album.escape('title') %>">
+
+    <label for="album-event_date">Event Date</label>
+    <input id="album-event_date" class="form-control" type="text" name="album[event_date]" value="<%= album.escape('event_date')%>">
+
+    <div class="edit-container group">
+      <div class="left-edit-form group">
+        <label for="album-status">Status</label>
+        <div class="status-options group">
+          <div class="status-published">Published</div> <div class="status-hidden">Hidden</div>
+        </div>
+      </div>
+
+      <div class="right-edit-form">
+        <label for="album-password">Password</label>
+        <input id="album-password" class="form-control" type="text" name="album[password]" value="<%= album.escape('password')%>">
+        <div class="optional-password">Leave password blank for public access of album.</div>
+      </div>
+    </div>
+
+    <div class="save-cancel group">
+      <input type="submit" class="submit-button submit-edit-album" value="Save">
+      <button class="cancel-button cancel-edit-album">Cancel</button>
+    </div>
+  </form>
+</div>

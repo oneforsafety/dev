@@ -1,0 +1,1 @@
+I"Ifunction(obj){var __p=[],print=function(){__p.push.apply(__p,arguments);};with(obj||{}){__p.push('<div class="handle">\n  <i class="fa fa-arrows fa-sm"></i>\n</div>\n\n<img class="image" src="',  photo.escape('thumb_url') ,'">\n\n<div class="photo-filename">\n  ',  photo.escape('file_name') ,'\n</div>\n');}return __p.join('');}:ET

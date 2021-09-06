@@ -1,0 +1,88 @@
+# Logfile created on 2021-09-06 11:04:22 -0400 by logger.rb/66358
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Starting the New Relic agent version 7.2.0 in "development" environment.
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] WARN : No configuration file found. Working directory = /Users/kirtanpatel/twinkieset
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] WARN : Looked in these locations (based on defaults): /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/.newrelic/newrelic.yml, /Users/kirtanpatel/newrelic.yml, /Users/kirtanpatel/.newrelic/newrelic.yml.erb, /Users/kirtanpatel/newrelic.yml.erb
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Environment: development
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Dispatcher: webrick
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Application: development
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing ActiveStorage 5 instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing notifications based Active Record instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing Net:HTTP Wrappers
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing Rails 3+ middleware instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing New Relic supported Rack instrumentation using Prepend
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing New Relic supported URLMap instrumentation using Prepend
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing ActiveJob instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing notifications based Action Controller instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing notification based Action View instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Installing notifications based Action Cable instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Finished instrumentation
+[2021-09-06 11:04:22 -0400 Kirtans-Air (7626)] INFO : Doing deferred dependency-detection before Rack startup
+[2021-09-06 11:06:45 -0400 Kirtans-Air (7626)] WARN : Agent received a ForceDisconnectException from the server, disconnecting. (410: Gone)
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Starting the New Relic agent version 7.2.0 in "development" environment.
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] WARN : No configuration file found. Working directory = /Users/kirtanpatel/twinkieset
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] WARN : Looked in these locations (based on defaults): /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/.newrelic/newrelic.yml, /Users/kirtanpatel/newrelic.yml, /Users/kirtanpatel/.newrelic/newrelic.yml.erb, /Users/kirtanpatel/newrelic.yml.erb
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Environment: development
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : No known dispatcher detected.
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Application: development
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing ActiveStorage 5 instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing notifications based Active Record instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing Net:HTTP Wrappers
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing Rails 3+ middleware instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing New Relic supported Rack instrumentation using Prepend
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing New Relic supported URLMap instrumentation using Prepend
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing ActiveJob instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing notifications based Action Controller instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing notification based Action View instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Installing notifications based Action Cable instrumentation
+[2021-09-06 11:14:34 -0400 Kirtans-Air (8355)] INFO : Finished instrumentation
+[2021-09-06 11:58:43 -0400 Kirtans-Air (7626)] INFO : Starting Agent shutdown
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Starting the New Relic agent version 7.2.0 in "development" environment.
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] WARN : No configuration file found. Working directory = /Users/kirtanpatel/twinkieset
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] WARN : Looked in these locations (based on defaults): /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/.newrelic/newrelic.yml, /Users/kirtanpatel/newrelic.yml, /Users/kirtanpatel/.newrelic/newrelic.yml.erb, /Users/kirtanpatel/newrelic.yml.erb
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Environment: development
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Dispatcher: webrick
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Application: development
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing ActiveStorage 5 instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing notifications based Active Record instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing Net:HTTP Wrappers
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing Rails 3+ middleware instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing New Relic supported Rack instrumentation using Prepend
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing New Relic supported URLMap instrumentation using Prepend
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing ActiveJob instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing notifications based Action Controller instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing notification based Action View instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Installing notifications based Action Cable instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Finished instrumentation
+[2021-09-06 11:58:49 -0400 Kirtans-Air (9043)] INFO : Doing deferred dependency-detection before Rack startup
+[2021-09-06 11:58:55 -0400 Kirtans-Air (9043)] WARN : Agent received a ForceDisconnectException from the server, disconnecting. (410: Gone)
+[2021-09-06 12:10:19 -0400 Kirtans-Air (9043)] INFO : Starting Agent shutdown
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Starting the New Relic agent version 7.2.0 in "development" environment.
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : To prevent agent startup add a NEW_RELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] WARN : No configuration file found. Working directory = /Users/kirtanpatel/twinkieset
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] WARN : Looked in these locations (based on defaults): /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/config/newrelic.yml, /Users/kirtanpatel/twinkieset/newrelic.yml, /Users/kirtanpatel/twinkieset/config/newrelic.yml.erb, /Users/kirtanpatel/twinkieset/newrelic.yml.erb, /Users/kirtanpatel/.newrelic/newrelic.yml, /Users/kirtanpatel/newrelic.yml, /Users/kirtanpatel/.newrelic/newrelic.yml.erb, /Users/kirtanpatel/newrelic.yml.erb
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Environment: development
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Dispatcher: webrick
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Application: development
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'. You may also want to try linting your newrelic.yml to ensure it is valid YML.
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing ActiveStorage 5 instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing notifications based Active Record instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing Net:HTTP Wrappers
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing New Relic supported NetHTTP instrumentation using Prepend
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing Rails 3+ middleware instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing New Relic supported Rack instrumentation using Prepend
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing New Relic supported URLMap instrumentation using Prepend
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing ActiveJob instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing notifications based Action Controller instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing notification based Action View instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Installing notifications based Action Cable instrumentation
+[2021-09-06 12:10:22 -0400 Kirtans-Air (9459)] INFO : Finished instrumentation
+[2021-09-06 12:10:23 -0400 Kirtans-Air (9459)] INFO : Doing deferred dependency-detection before Rack startup

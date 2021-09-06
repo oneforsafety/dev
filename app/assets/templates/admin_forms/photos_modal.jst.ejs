@@ -1,0 +1,9 @@
+<div class="prev-image"><i class="fa fa-angle-left"></i></div>
+<div class="next-image"><i class="fa fa-angle-right"></i></div>
+<div class="close-gallery-modal">&#x2715;</div>
+
+<div class="active-image">
+  <img src="<%= photo.escape('image_url') %>">
+</div>
+<div class="file-name"><%= photo.escape('file_name') %></div>
+<div class="gallery-counter"><%= position %> of <%= photoCollectionLength %></div>

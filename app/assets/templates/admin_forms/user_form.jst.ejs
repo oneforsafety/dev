@@ -1,0 +1,52 @@
+<div class="form-container user-form">
+  <button title="Close (Esc)" type="button" class="close-view">×</button>
+
+  <div class="title">Your Profile</div>
+  <form class="form-group">
+    <div class="errors"></div>
+    <div class="profile-photo group">
+      Profile Photo
+      <div class="avatar-container">
+        <div class="user-avatar">
+          <img class="avatar-image" src="<%= user.escape('avatar') %>">
+          <div class="user-avatar-plus"><i class="fa fa-plus-square-o fa-2x"></i></div>
+        </div>
+
+        <div class="user-avatar-info input-info">
+          Your profile picture is shown on your collections, homepage and other places where applicable. <span class="no-photo">Set no photo.</span>
+        </div>
+      </div>
+    </div>
+    <label for="user-email">Email</label>
+    <input id="user-email"
+      class="form-control" type="text"
+      name="user[email]"
+      value="<%= user.escape('email') %>">
+    <div class="input-info">
+      You will receive important notifications at this email, and your client will see this email where applicable.
+    </div>
+
+    <label for="user-business_name">Business Name</label>
+    <input id="user-business_name"
+      class="form-control" type="text"
+      name="user[business_name]"
+      value="<%= user.escape('business_name') %>">
+    <div class="input-info">
+      Your business name is shown on your homepage, collections, email notifications and more.
+    </div>
+
+      <label for="user-website">Website</label>
+      <input id="user-website"
+        class="form-control" type="text"
+        name="user[website]"
+        value="<%= user.escape('website') %>">
+    <div class="input-info">
+      Your client will find links back to your website in many places throughout Twinkieset. It is important that you enter a valid website address.
+    </div>
+
+    <div class="save-cancel group">
+      <input type="submit" class="submit-button submit-user" value="Save">
+      <button class="cancel-button cancel-user">Cancel</button>
+    </div>
+  </form>
+</div>

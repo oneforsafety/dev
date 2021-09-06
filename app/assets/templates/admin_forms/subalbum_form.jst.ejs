@@ -1,0 +1,22 @@
+<div class="form-container subalbum-form">
+  <button title="Close (Esc)" type="button" class="close-view">×</button>
+
+  <div class="title"><%= header %></div>
+
+  <form class="form-group">
+    <div class="errors"></div>
+    <input type="hidden" name="subalbum[album_id]" value="<%= album.id %>">
+
+    <label for="subalbum-title">Photo Set Name</label>
+    <input id="subalbum-title"
+      class="form-control" type="text"
+      name="subalbum[title]"
+      value="<%= subalbum.escape('title')%>"
+      placeholder="e.g. Ceremony, Reception, Getting Ready">
+
+    <div class="save-cancel group">
+      <input type="submit" class="submit-button submit-subalbum" value="Save">
+      <button class="cancel-button cancel-subalbum">Cancel</button>
+    </div>
+  </form>
+</div>

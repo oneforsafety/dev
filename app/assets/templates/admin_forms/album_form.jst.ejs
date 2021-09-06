@@ -1,0 +1,19 @@
+<div class="form-container album-form">
+  <button title="Close (Esc)" type="button" class="close-view">×</button>
+
+  <div class="title">New Collection</div>
+
+  <form class="form-group">
+    <div class="errors"></div>
+    <label for="album-title">Give your collection a name</label>
+    <input id="album-title" class="form-control" type="text" name="album[title]" placeholder="e.g. Jessie & Ryan">
+
+    <label for="album-event_date">What is the date of the event?</label>
+    <input id="album-event_date" class="form-control" type="text" name="album[event_date]" placeholder="Pick a date">
+
+    <div class="save-cancel group">
+      <input type="submit" class="submit-button submit-album" value="Create collection">
+      <button class="cancel-button cancel-new-album">Cancel</button>
+    </div>
+  </form>
+</div>

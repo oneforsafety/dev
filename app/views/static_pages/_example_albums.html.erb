@@ -1,0 +1,14 @@
+<div class="container-fluid example-albums">
+  <div class="header">
+    <div class="content">
+      <div class="see-in-action">See It In Action</div>
+      <div class="see-in-action-tagline">Twinkieset is trusted by some of the most inspiring professional photographers.</div>
+      <%= button_to "Get Started", new_user_url, {method: 'get', class: 'get-started'} %>
+    </div>
+  </div>
+  <div class="users">
+    <% @users.each do |user| %>
+      <%= render 'example_album', user: user %>
+    <% end %>
+  </div>
+</div>

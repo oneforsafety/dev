@@ -1,0 +1,9 @@
+<div class="content">
+  <div class="business_name">
+    <a href="/users#<%= owner.id %>">
+      <%= owner.escape('business_name') %>
+    </a>
+  </div>
+
+  <div class="intro">The collection you are looking for is unavailable. If you have any questions, please contact <a href="mailto:<%= owner.escape('email') %>"><%= owner.escape('email') %></a>.</div>
+</div>

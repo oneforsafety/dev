@@ -1,0 +1,71 @@
+<div class="title">
+  <%= subalbum.escape('title') %>
+  <div class="file-name-options">
+    <i class="fa fa-th-large hide-filenames selected">
+      <div class="hover-tip hide-filename-tip">
+        <div class="point"></div>
+        <div class="content">Hide filenames</div>
+      </div>
+    </i>
+
+    <i class="fa fa-th-list show-filenames">
+      <div class="hover-tip show-filename-tip">
+        <div class="point"></div>
+        <div class="content">Show filenames</div>
+      </div>
+    </i>
+
+  </div>
+
+  <div class="create-sort-buttons">
+    <span class="new-photo-button">
+      <i class="fa fa-plus"></i>&nbsp; Add Photos
+    </span>
+
+    <span class="sort-photo-button">
+      Sort <i class="fa fa-sort sorting-arrows"></i>
+    </span>
+    <ul class="sort-by-options">
+      <li class="sort-a-z">Name: A-Z</li>
+      <li class="sort-a-z-reverse">Name: Z-A</li>
+      <li class="sort-upload">Upload date: Old → New</li>
+      <li class="sort-upload-reverse">Upload date: New → Old</li>
+      <li class="sort-date-taken">Date taken: Old → New</li>
+      <li class="sort-date-taken-reverse">Date taken: New → Old</li>
+      <li class="sort-random">Random</li>
+    </ul>
+  </div>
+</div>
+
+<div class="photo-buttons-container group">
+
+  <div class="photo-selection-options">
+    <span class="number-of-selected"></span>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:void(0)" class="select-all">Select All</a>&nbsp;&nbsp;&nbsp;
+    <a href="javascript:void(0)" class="clear-selection">Clear Selection</a>
+  </div>
+  <div class="photo-buttons">
+    <span class="view-photos-button">
+      <i class="fa fa-search-plus"></i>
+    </span>
+    <span class="trash-photos-button">
+      <i class="fa fa-trash-o"></i>
+    </span>
+    <span class="make-cover-button">
+      <i class="fa fa-picture-o"></i> Make Cover
+      <div class="hover-tip cover-rule">
+        <div class="point"></div>
+        <div class="content">Please select only one<br>photo to make cover.</div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<ul class="photo-items">
+  <div class="no-photos">
+    You have no photos in this Set.<br>
+    <span class="new-photo-button">
+      <i class="fa fa-plus"></i>&nbsp; Add Photos
+    </span>
+  </div>
+</ul>

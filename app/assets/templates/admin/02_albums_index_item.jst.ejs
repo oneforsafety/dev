@@ -1,0 +1,14 @@
+<a href="#collection/<%= album.id %>">
+  <div class="cover-image-container"></div>
+</a>
+
+<div class="title">
+  <a href="#collection/<%= album.id %>">
+    <%= album.escape('title') %>
+  </a>
+  <span class="delete-album-button">
+    <i class="fa fa-trash-o fa-1"></i>
+  </span>
+</div>
+
+<div class="event_date"><%= album.escape('string_date') %></div>

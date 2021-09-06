@@ -1,0 +1,37 @@
+<div class="hero">
+  <div class="details">
+    <div class="album-title"><%= album.escape('title') %></div>
+    <div class="album-event-date"><%= album.escape('string_date') %></div>
+    <div class="album-open-button">Open</a></div>
+  </div>
+  <% if (owner.escape('avatar')) { %>
+    <div class="user-avatar">
+      <img src="<%= owner.escape('avatar') %>">
+    </div>
+  <% } %>
+  <div class="owner-business-name">
+    <a href="<%= owner.escape('website') %>"><%= owner.escape('business_name') %></div>
+  </div>
+</div>
+
+<div class="information">
+  <div class="left-wrapper">
+    <div class="album-title">
+      <a href="#<%= Backbone.history.getFragment() %>">
+        <%= album.escape('title') %>
+      </a>
+    </div>
+    <div class="album-event-date">
+      <a href="<%= owner.escape('website') %>">
+        <%= owner.escape('business_name') %>
+      </a>
+    </div>
+  </div>
+  <ul class="list-of-subalbums"></ul>
+</div>
+
+<div class="gallery-section">
+  <div class="public-photos-index"></div>
+  <div class='loading-gif' style="font-size: 30px"><img src="http://images.karenling.net/aa/loading-gif-animate.gif" width="100px"></div>
+  <ul class="view-more"></ul>
+</div>

@@ -1,0 +1,13 @@
+<a href="/users#<%= owner.escape('id') %>/collection/<%= album.id %>">
+  <div class="album-image"></div>
+</a>
+<a href="/users#<%= owner.escape('id') %>/collection/<%= album.id %>">
+  <div class="album-title"><%= album.escape('title') %></div>
+  <div class="album-date"><%= album.escape('string_date') %></div>
+</a>
+
+<% if (album.get('password')) { %>
+  <div class="password-protect">
+    <i class="fa fa-lock"></i>
+  </div>
+<% } %>

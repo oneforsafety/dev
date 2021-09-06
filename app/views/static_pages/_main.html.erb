@@ -1,0 +1,52 @@
+<div class="container-fluid splash">
+  <nav>
+    <a href="/"><img src="http://images.karenling.net/aa/logo.png" height="16px" class="pull-left"></a>
+
+    <ul class="options pull-right">
+      <li class="welcome-link current">Welcome</li>
+
+      <li class="design-link">Design</li>
+
+      <li class="examples-link">Examples</li>
+
+      <% if logged_in? %>
+        <li class="open-dash">
+          <a href="/admin">Open Dashboard</a>
+        </li>
+      <% else %>
+        <li class="open-login">
+          <%= link_to 'Login', new_session_url %>
+        </li>
+        <li class="open-signup">
+          <%= link_to 'Sign Up', new_user_url %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="landing-title">BEAUTIFUL CLIENT PHOTO GALLERIES</h1>
+      <h2 class="tag-line">The better way for modern photographers to share, deliver, proof and sell online.</h2>
+      <div class="get-started-guest"><%= link_to 'Guest Login', new_session_url(demo: "true"), { method: "get", class: "guest-login-button", id: "guest-login-button"} %></div>
+      <div class="check-out-demo">Register for a free account or try out a guest account.</div>
+    </div>
+    <div class="down-arrow moved">
+      <div class="left-side"></div><div class="right-side"></div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    setInterval(function () {
+      $('.down-arrow').toggleClass('moved');
+    }, 400);
+
+    $(".down-arrow").click(function() {
+      $('html, body').animate({
+        scrollTop: $('.design-examples').offset().top - 25
+      }, 2000);
+    });
+  })
+</script>
