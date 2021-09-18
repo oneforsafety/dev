@@ -182,7 +182,7 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
             "image_url": image.url,
             "file_name": image.original_filename,
             "subalbum_id": this.model.id,
-            "thumb_url": image.thumbnail_url,
+            "thumb_url": image.url,
             "medium_url": image.url,
             "date_taken": convertedDate
           }
