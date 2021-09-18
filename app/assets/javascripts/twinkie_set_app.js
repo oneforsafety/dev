@@ -1,10 +1,10 @@
-window.TwinkieSetApp = {
+window.OneForSafetyApp = {
   Models: {},
   Collections: {},
   Views: {},
   Routers: {},
   initialize: function() {
-    var router = new TwinkieSetApp.Routers.Router({
+    var router = new OneForSafetyApp.Routers.Router({
       $rootEl: $('#content'),
       $rootElPublic: $('#content-public')
     });

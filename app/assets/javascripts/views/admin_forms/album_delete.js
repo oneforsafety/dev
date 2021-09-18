@@ -1,9 +1,9 @@
-TwinkieSetApp.Views.DeleteAlbum = Backbone.View.extend({
+OneForSafetyApp.Views.DeleteAlbum = Backbone.View.extend({
   template: JST['admin_forms/album_delete'],
   className: 'form-modal',
 
   initialize: function () {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
     $('body').keydown(function (e) {
       if (e.keyCode === 13) {
         e.preventDefault();

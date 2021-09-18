@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PublicAlbumItem = Backbone.View.extend({
+OneForSafetyApp.Views.PublicAlbumItem = Backbone.View.extend({
   template: JST['public/01_public_album_item'],
   className: 'one-album col-xs-4 col-sm-4',
 

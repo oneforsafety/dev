@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.Notice = Backbone.View.extend({
+OneForSafetyApp.Views.Notice = Backbone.View.extend({
   template: JST['admin_forms/notice'],
   className: 'notice-green',
 

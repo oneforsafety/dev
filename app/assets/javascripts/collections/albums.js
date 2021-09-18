@@ -1,6 +1,6 @@
-TwinkieSetApp.Collections.Albums = Backbone.Collection.extend({
+OneForSafetyApp.Collections.Albums = Backbone.Collection.extend({
   url: '/api/albums',
-  model: TwinkieSetApp.Models.Album,
+  model: OneForSafetyApp.Models.Album,
 
   getOrFetch: function (id) {
     var album = this.get(id);
@@ -12,7 +12,7 @@ TwinkieSetApp.Collections.Albums = Backbone.Collection.extend({
         }
       });
     } else {
-      album = new TwinkieSetApp.Models.Album({ id: id });
+      album = new OneForSafetyApp.Models.Album({ id: id });
       album.fetch({
         success: function () {
           this.add(album);

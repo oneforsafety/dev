@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsShowSubalbumItem = Backbone.View.extend({
+OneForSafetyApp.Views.AlbumsShowSubalbumItem = Backbone.View.extend({
   template: JST['admin/05_albums_show_subalbum_item'],
   className: function () {
     return 'album-show-sidebar-subalbums-li subalbum-' + this.model.id;
@@ -24,14 +24,14 @@ TwinkieSetApp.Views.AlbumsShowSubalbumItem = Backbone.View.extend({
   },
 
   deleteSubalbumConfirmation: function () {
-    var deleteAlbumModal = new TwinkieSetApp.Views.DeleteSubalbum({
+    var deleteAlbumModal = new OneForSafetyApp.Views.DeleteSubalbum({
       subalbum: this.model
     });
     $('body').append(deleteAlbumModal.render().$el);
   },
 
   editSubalbum: function () {
-    var subalbumForm = new TwinkieSetApp.Views.SubalbumForm({
+    var subalbumForm = new OneForSafetyApp.Views.SubalbumForm({
       header: "Edit Photo Set",
       album: this.album,
       subalbum: this.model,

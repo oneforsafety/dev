@@ -4,9 +4,9 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1>Welcome to TWINKIESET.com, <%= @user.business_name %></h1>
+    <h1>Welcome to oneForSafety.io, <%= @user.business_name %></h1>
     <p>
-      You have successfully signed up to TWINKIESET.com,
+      You have successfully signed up to oneForSafety.io,
       your username is: <%= @user.email %>.<br/>
 
       Please activate your account by clicking here: <a href="<%= activate_users_url(activation_token: @user.activation_token) %>"><%= activate_users_url(activation_token: @user.activation_token) %></a>

@@ -1,4 +1,4 @@
-TwinkieSetApp.Models.Album = Backbone.Model.extend({
+OneForSafetyApp.Models.Album = Backbone.Model.extend({
   urlRoot: '/api/albums',
 
   parse: function (jsonResponse) {
@@ -15,7 +15,7 @@ TwinkieSetApp.Models.Album = Backbone.Model.extend({
 
   subalbums: function () {
     if (!this._subalbums) {
-      this._subalbums = new TwinkieSetApp.Collections.Subalbums([], { album: this } );
+      this._subalbums = new OneForSafetyApp.Collections.Subalbums([], { album: this } );
     }
     return this._subalbums;
   }

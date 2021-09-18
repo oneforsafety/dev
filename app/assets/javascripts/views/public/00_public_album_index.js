@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PublicAlbumIndex = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.PublicAlbumIndex = Backbone.CompositeView.extend({
   template: JST['public/00_public_album_index'],
 
   initialize: function (options) {
@@ -11,7 +11,7 @@ TwinkieSetApp.Views.PublicAlbumIndex = Backbone.CompositeView.extend({
   },
 
   addAlbumView: function (album) {
-    var subview = new TwinkieSetApp.Views.PublicAlbumItem({
+    var subview = new OneForSafetyApp.Views.PublicAlbumItem({
       model: album,
       owner: this.model
     });

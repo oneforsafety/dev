@@ -1,9 +1,9 @@
-TwinkieSetApp.Views.UserForm = Backbone.View.extend({
+OneForSafetyApp.Views.UserForm = Backbone.View.extend({
   template: JST['admin_forms/user_form'],
   className: 'form-modal',
 
   initialize: function (options) {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
     this.user = options.user;
     this.user.fetch();
     this.listenTo(this.user, 'sync', this.render);
@@ -36,7 +36,7 @@ TwinkieSetApp.Views.UserForm = Backbone.View.extend({
       success: function () {
         this.remove();
         user.fetch();
-        var notice = new TwinkieSetApp.Views.Notice({
+        var notice = new OneForSafetyApp.Views.Notice({
           notice: "Profile updated successfully."
         });
         $('body').append(notice.render().$el);

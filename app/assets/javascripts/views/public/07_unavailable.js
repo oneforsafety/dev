@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.Unavailable = Backbone.View.extend({
+OneForSafetyApp.Views.Unavailable = Backbone.View.extend({
   template: JST['public/07_unavailable'],
   className: 'unavailable',
 

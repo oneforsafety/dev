@@ -1,6 +1,6 @@
-TwinkieSetApp.Collections.Subalbums = Backbone.Collection.extend({
+OneForSafetyApp.Collections.Subalbums = Backbone.Collection.extend({
   url: '/api/subalbums',
-  model: TwinkieSetApp.Models.Subalbum,
+  model: OneForSafetyApp.Models.Subalbum,
 
   comparator: function (subalbum) {
     return subalbum.get('order');
@@ -12,7 +12,7 @@ TwinkieSetApp.Collections.Subalbums = Backbone.Collection.extend({
     if (subalbum) {
       subalbum.fetch();
     } else {
-      subalbum = new TwinkieSetApp.Models.Album({ id: id });
+      subalbum = new OneForSafetyApp.Models.Album({ id: id });
       subalbum.fetch({
         success: function () {
           this.add(subalbum);

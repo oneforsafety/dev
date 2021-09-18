@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PublicAlbumShow = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.PublicAlbumShow = Backbone.CompositeView.extend({
   template: JST['public/02_public_album_show'],
 
   initialize: function (options) {
@@ -38,7 +38,7 @@ TwinkieSetApp.Views.PublicAlbumShow = Backbone.CompositeView.extend({
     $('.view-more li.subalbum-' + this.setID).hide();
 
     var subalbum = this.album.subalbums().get(this.setID);
-    var photosInSubalbum = new TwinkieSetApp.Views.PublicSubalbumPhotos({
+    var photosInSubalbum = new OneForSafetyApp.Views.PublicSubalbumPhotos({
       model: subalbum
     });
 
@@ -49,13 +49,13 @@ TwinkieSetApp.Views.PublicAlbumShow = Backbone.CompositeView.extend({
   },
 
   addSubalbum: function (subalbum) {
-    var subview = new TwinkieSetApp.Views.PublicSubalbumItem({
+    var subview = new OneForSafetyApp.Views.PublicSubalbumItem({
       model: subalbum,
       user_id: this.album_owner.id
     });
     this.addSubview('.view-more', subview);
 
-    var subview = new TwinkieSetApp.Views.PublicSubalbumItem({
+    var subview = new OneForSafetyApp.Views.PublicSubalbumItem({
       model: subalbum,
       user_id: this.album_owner.id
     });

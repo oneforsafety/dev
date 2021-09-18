@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsIndexView = Backbone.View.extend({
+OneForSafetyApp.Views.AlbumsIndexView = Backbone.View.extend({
   template: JST['admin/02_albums_index_item'],
   className: 'album_index_item col-xs-6 col-sm-3',
 
@@ -11,7 +11,7 @@ TwinkieSetApp.Views.AlbumsIndexView = Backbone.View.extend({
   },
 
   deleteAlbumConfirmation: function () {
-    var deleteAlbumModal = new TwinkieSetApp.Views.DeleteAlbum({
+    var deleteAlbumModal = new OneForSafetyApp.Views.DeleteAlbum({
       model: this.model
     });
     $('body').append(deleteAlbumModal.render().$el);

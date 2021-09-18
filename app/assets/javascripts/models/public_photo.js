@@ -1,2 +1,2 @@
-TwinkieSetApp.Models.PublicPhoto = Backbone.Model.extend({
+OneForSafetyApp.Models.PublicPhoto = Backbone.Model.extend({
 });

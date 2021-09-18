@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsShow = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.AlbumsShow = Backbone.CompositeView.extend({
   template: JST['admin/03_show'],
   className: 'album-show',
 
@@ -7,11 +7,11 @@ TwinkieSetApp.Views.AlbumsShow = Backbone.CompositeView.extend({
     this.subAlbumViewCreated = false;
     this.currentSubalbumId = options.subalbumID;
     this.listenTo(this.model, "sync", this.render);
-    this.navBarView = new TwinkieSetApp.Views.NavBar({
+    this.navBarView = new OneForSafetyApp.Views.NavBar({
       user: this.user
     });
     this.addSubview("nav", this.navBarView);
-    this.sidebar = new TwinkieSetApp.Views.AlbumsShowSidebar({
+    this.sidebar = new OneForSafetyApp.Views.AlbumsShowSidebar({
       model: this.model
     });
     this.addSubview(".album-show-sidebar", this.sidebar);
@@ -29,10 +29,10 @@ TwinkieSetApp.Views.AlbumsShow = Backbone.CompositeView.extend({
         this.currentSubalbumId = this.model.subalbums().first().id;
       }
     }
-    var subalbum = new TwinkieSetApp.Models.Subalbum({id: this.currentSubalbumId});
+    var subalbum = new OneForSafetyApp.Models.Subalbum({id: this.currentSubalbumId});
     subalbum._album = this.model;
 
-    this.photoIndexView = new TwinkieSetApp.Views.PhotosIndex({
+    this.photoIndexView = new OneForSafetyApp.Views.PhotosIndex({
       model: subalbum,
       collection: subalbum.photos()
     });

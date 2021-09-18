@@ -1,4 +1,4 @@
-TwinkieSetApp.Models.Owner = Backbone.Model.extend({
+OneForSafetyApp.Models.Owner = Backbone.Model.extend({
   urlRoot: 'api/owners/',
 
   parse: function (response) {
@@ -15,7 +15,7 @@ TwinkieSetApp.Models.Owner = Backbone.Model.extend({
 
   albums: function () {
     if (!this._albums) {
-      this._albums = new TwinkieSetApp.Collections.PublicAlbums([], {
+      this._albums = new OneForSafetyApp.Collections.PublicAlbums([], {
         owner: this,
         userID: this.userID
       });

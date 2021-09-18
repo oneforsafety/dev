@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.DeleteSubalbum = Backbone.View.extend({
+OneForSafetyApp.Views.DeleteSubalbum = Backbone.View.extend({
   template: JST['admin_forms/subalbum_delete'],
   className: 'form-modal',
 
@@ -9,7 +9,7 @@ TwinkieSetApp.Views.DeleteSubalbum = Backbone.View.extend({
   },
 
   initialize: function (options) {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
     this.subalbum = options.subalbum;
     $('body').keydown(function (e) {
       if (e.keyCode === 13) {

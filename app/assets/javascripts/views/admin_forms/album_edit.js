@@ -1,9 +1,9 @@
-TwinkieSetApp.Views.EditForm = Backbone.View.extend({
+OneForSafetyApp.Views.EditForm = Backbone.View.extend({
   template: JST['admin_forms/album_edit'],
   className: 'form-modal',
 
   initialize: function () {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
   },
 
   events: {
@@ -42,7 +42,7 @@ TwinkieSetApp.Views.EditForm = Backbone.View.extend({
       success: function () {
         editAlbum.fetch();
         this.remove();
-        var notice = new TwinkieSetApp.Views.Notice({
+        var notice = new OneForSafetyApp.Views.Notice({
           notice: "Album updated successfully!"
         });
         $('body').append(notice.render().$el);

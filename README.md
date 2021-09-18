@@ -1,5 +1,5 @@
 
-# Twinkieset
+# oneForSafety
 
 
 #### Splash/landing Page
@@ -21,7 +21,7 @@
 
 
 ## Minimum Viable Product
-Twinkieset is a client photo gallery for modern photographers, inspired by [Pixieset](http://pixieset.com/), built on Rails and Backbone. Users can:
+oneForSafety is a client photo gallery for modern photographers, inspired by [Pixieset](http://pixieset.com/), built on Rails and Backbone. Users can:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 

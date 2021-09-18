@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PublicSubalbumItem = Backbone.View.extend({
+OneForSafetyApp.Views.PublicSubalbumItem = Backbone.View.extend({
   template: JST['public/03_public_subalbum_item'],
   tagName: 'li',
   className: function () {
@@ -23,11 +23,11 @@ TwinkieSetApp.Views.PublicSubalbumItem = Backbone.View.extend({
     $('.view-more li').fadeIn();
     $('.view-more li.subalbum-' + setID).hide();
 
-    TwinkieSetApp.Views.masonryGallery.masonry('destroy');
-    TwinkieSetApp.Views.masonryGallery = null;
+    OneForSafetyApp.Views.masonryGallery.masonry('destroy');
+    OneForSafetyApp.Views.masonryGallery = null;
     $('.public-subalbum-photos').html("");
 
-    var photosInSubalbum = new TwinkieSetApp.Views.PublicSubalbumPhotos({
+    var photosInSubalbum = new OneForSafetyApp.Views.PublicSubalbumPhotos({
       model: currentSub
     });
     $('.public-photos-index').html(photosInSubalbum.render().$el);

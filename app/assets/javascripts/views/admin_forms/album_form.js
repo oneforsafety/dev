@@ -1,9 +1,9 @@
-TwinkieSetApp.Views.Form = Backbone.View.extend({
+OneForSafetyApp.Views.Form = Backbone.View.extend({
   template: JST['admin_forms/album_form'],
   className: 'form-modal',
 
   initialize: function () {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
   },
 
   events: {
@@ -20,13 +20,13 @@ TwinkieSetApp.Views.Form = Backbone.View.extend({
   createAlbum: function (event) {
     event.preventDefault();
     var attrs = $(event.currentTarget).serializeJSON();
-    var newAlbum = new TwinkieSetApp.Models.Album();
+    var newAlbum = new OneForSafetyApp.Models.Album();
     newAlbum.save(attrs, {
       success: function () {
         this.collection.add(newAlbum);
         newAlbum.fetch();
         this.remove();
-        var notice = new TwinkieSetApp.Views.Notice({
+        var notice = new OneForSafetyApp.Views.Notice({
           notice: "Album created successfully!"
         });
         $('body').append(notice.render().$el);

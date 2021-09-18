@@ -1,8 +1,8 @@
-TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.PhotosIndex = Backbone.CompositeView.extend({
   template: JST['admin/07_index'],
 
   initialize: function (options) {
-    TwinkieSetApp.selectedPhotosArr = [];
+    OneForSafetyApp.selectedPhotosArr = [];
     this.listenTo(this.model, 'sync', this.render);
     this.listenTo(this.collection, "add", this.addPhotoView);
     this.listenTo(this.collection, 'remove', this.removePhotoView);
@@ -36,9 +36,9 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
   },
 
   galleryModal: function (event) {
-    var photoModal = new TwinkieSetApp.Views.PhotosModal({
-      model: TwinkieSetApp.selectedPhotosArr[0],
-      collection: TwinkieSetApp.selectedPhotosArr,
+    var photoModal = new OneForSafetyApp.Views.PhotosModal({
+      model: OneForSafetyApp.selectedPhotosArr[0],
+      collection: OneForSafetyApp.selectedPhotosArr,
       position: 0
     });
     $('body').append(photoModal.render().$el);
@@ -127,7 +127,7 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
   },
 
   selectAllPhotos: function (event) {
-    TwinkieSetApp.selectedPhotosArr = [];
+    OneForSafetyApp.selectedPhotosArr = [];
     var photosCollection = this.collection;
     $('.photo-item').each(function (idx, photoli) {
       var imageURL = $(photoli).find('img').attr("src");
@@ -136,7 +136,7 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
         return photo.get("thumb_url") === imageURL;
       });
 
-      TwinkieSetApp.selectedPhotosArr.push(photoModel);
+      OneForSafetyApp.selectedPhotosArr.push(photoModel);
       $(photoli).removeClass('not-selected').addClass('selected');
 
     }.bind(this));
@@ -145,19 +145,19 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
   },
 
   clearSelection: function (event) {
-    TwinkieSetApp.selectedPhotosArr = [];
+    OneForSafetyApp.selectedPhotosArr = [];
     $('.photo-item').removeClass('selected').addClass('not-selected');
 
     $('.number-of-selected').html("0 selected");
   },
 
   showPhotoDeleteModal: function (event) {
-    var deleteView = new TwinkieSetApp.Views.PhotosDelete();
+    var deleteView = new OneForSafetyApp.Views.PhotosDelete();
     $('body').append(deleteView.render().$el);
   },
 
   upload: function (e) {
-    TwinkieSetApp.selectedPhotosArr = [];
+    OneForSafetyApp.selectedPhotosArr = [];
     $('.photo-item').addClass('not-selected').removeClass('selected');
     $('.number-of-selected').html("0 selected");
     cloudinary.openUploadWidget(CLOUDINARY_SETTINGS,
@@ -188,7 +188,7 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
           }
         };
 
-        var photo = new TwinkieSetApp.Models.Photo(imageData);
+        var photo = new OneForSafetyApp.Models.Photo(imageData);
         photo.save({}, {
           success: function () {
             this.collection.add(photo);
@@ -267,7 +267,7 @@ TwinkieSetApp.Views.PhotosIndex = Backbone.CompositeView.extend({
 
   addPhotoView: function (photo) {
     $('.no-photos').hide();
-    var subview = new TwinkieSetApp.Views.AlbumsShowPhotoItem({
+    var subview = new OneForSafetyApp.Views.AlbumsShowPhotoItem({
       model: photo,
       album: this.model._album
     });

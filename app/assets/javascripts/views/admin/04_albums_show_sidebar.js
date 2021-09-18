@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
   template: JST['admin/04_show_sidebar'],
 
   initialize: function () {
@@ -23,7 +23,7 @@ TwinkieSetApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
   },
 
   openEditForm: function (event) {
-    var subalbumForm = new TwinkieSetApp.Views.EditForm({
+    var subalbumForm = new OneForSafetyApp.Views.EditForm({
       model: this.model
     });
     $('body').append(subalbumForm.render().$el);
@@ -48,7 +48,7 @@ TwinkieSetApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
   },
 
   openShareCollection: function () {
-    var shareView = new TwinkieSetApp.Views.Share({
+    var shareView = new OneForSafetyApp.Views.Share({
       album: this.model
     });
     $('body').append(shareView.render().$el);
@@ -59,10 +59,10 @@ TwinkieSetApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
   },
 
   openSubalbumForm: function () {
-    var subalbumForm = new TwinkieSetApp.Views.SubalbumForm({
+    var subalbumForm = new OneForSafetyApp.Views.SubalbumForm({
       header: "New Photo Set",
       album: this.model,
-      subalbum: new TwinkieSetApp.Models.Subalbum()
+      subalbum: new OneForSafetyApp.Models.Subalbum()
     });
     $('body').append(subalbumForm.render().$el);
   },
@@ -72,7 +72,7 @@ TwinkieSetApp.Views.AlbumsShowSidebar = Backbone.CompositeView.extend({
   },
 
   addSubAlbumView: function (subalbum) {
-    var subview = new TwinkieSetApp.Views.AlbumsShowSubalbumItem({
+    var subview = new OneForSafetyApp.Views.AlbumsShowSubalbumItem({
       model: subalbum,
       album: this.model
     });

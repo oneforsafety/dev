@@ -1,10 +1,10 @@
-TwinkieSetApp.Views.UserPassword = Backbone.View.extend({
+OneForSafetyApp.Views.UserPassword = Backbone.View.extend({
   template: JST['admin_forms/user_password'],
   className: 'form-modal',
 
   initialize: function (options) {
     this.user = options.userl
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
   },
 
   events: {
@@ -26,11 +26,11 @@ TwinkieSetApp.Views.UserPassword = Backbone.View.extend({
       this.$el.find('.errors').html("New passwords do not match.");
       return;
     }
-    var user = new TwinkieSetApp.Models.Owner({ id: CURRENT_USER.id });
+    var user = new OneForSafetyApp.Models.Owner({ id: CURRENT_USER.id });
     user.save(attrs, {
       success: function (models, response) {
         this.remove();
-        var notice = new TwinkieSetApp.Views.Notice({
+        var notice = new OneForSafetyApp.Views.Notice({
           notice: response.responseText
         });
         $('body').append(notice.render().$el);

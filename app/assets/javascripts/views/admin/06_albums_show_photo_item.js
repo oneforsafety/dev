@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsShowPhotoItem = Backbone.View.extend({
+OneForSafetyApp.Views.AlbumsShowPhotoItem = Backbone.View.extend({
   template: JST['admin/06_albums_show_photo_item'],
   className: 'photo-item not-selected',
   tagName: 'li',
@@ -23,18 +23,18 @@ TwinkieSetApp.Views.AlbumsShowPhotoItem = Backbone.View.extend({
 
     if (photoItem.hasClass('selected')) {
       photoItem.removeClass('selected').addClass('not-selected');
-      var indexOfModel = TwinkieSetApp.selectedPhotosArr.indexOf(this.model);
-      TwinkieSetApp.selectedPhotosArr.splice(indexOfModel, 1);
+      var indexOfModel = OneForSafetyApp.selectedPhotosArr.indexOf(this.model);
+      OneForSafetyApp.selectedPhotosArr.splice(indexOfModel, 1);
     } else {
       photoItem.addClass('selected').removeClass('not-selected');
-      TwinkieSetApp.selectedPhotosArr.push(this.model);
+      OneForSafetyApp.selectedPhotosArr.push(this.model);
     }
 
-    if (TwinkieSetApp.selectedPhotosArr.length > 0) {
+    if (OneForSafetyApp.selectedPhotosArr.length > 0) {
       $('.photo-buttons-container').show();
-      if (TwinkieSetApp.selectedPhotosArr.length !== 1) {
+      if (OneForSafetyApp.selectedPhotosArr.length !== 1) {
         $('.make-cover-button').addClass('gray-out');
-      } else if (TwinkieSetApp.selectedPhotosArr.length === 1) {
+      } else if (OneForSafetyApp.selectedPhotosArr.length === 1) {
         $('.make-cover-button').removeClass('gray-out');
         $('.make-cover-button').on("click", this.makeCoverImage.bind(this));
       }
@@ -45,14 +45,14 @@ TwinkieSetApp.Views.AlbumsShowPhotoItem = Backbone.View.extend({
   },
 
   updateSelectedPhotoCounter: function () {
-    $('.number-of-selected').html(TwinkieSetApp.selectedPhotosArr.length + " selected");
+    $('.number-of-selected').html(OneForSafetyApp.selectedPhotosArr.length + " selected");
   },
 
   makeCoverImage: function (event) {
-    if(TwinkieSetApp.selectedPhotosArr.length !== 1){
+    if(OneForSafetyApp.selectedPhotosArr.length !== 1){
       return;
     }
-    var photoID = TwinkieSetApp.selectedPhotosArr[0].id;
+    var photoID = OneForSafetyApp.selectedPhotosArr[0].id;
     this.album.save({"album": { "cover_image_id": photoID  } }, { patch: true });
   },
 

@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.SubalbumForm = Backbone.View.extend({
+OneForSafetyApp.Views.SubalbumForm = Backbone.View.extend({
   template: JST['admin_forms/subalbum_form'],
   className: 'form-modal',
 
@@ -6,7 +6,7 @@ TwinkieSetApp.Views.SubalbumForm = Backbone.View.extend({
     this.header = options.header;
     this.album = options.album;
     this.subalbum = options.subalbum;
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
   },
 
   render: function () {
@@ -34,7 +34,7 @@ TwinkieSetApp.Views.SubalbumForm = Backbone.View.extend({
         this.album.subalbums().add(subalbum);
         subalbum.fetch();
         this.remove();
-        var notice = new TwinkieSetApp.Views.Notice({
+        var notice = new OneForSafetyApp.Views.Notice({
           notice: response.responseText
         });
         $('body').append(notice.render().$el);

@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.AlbumsIndex = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.AlbumsIndex = Backbone.CompositeView.extend({
   template: JST['admin/01_index'],
   className: "none",
 
@@ -8,7 +8,7 @@ TwinkieSetApp.Views.AlbumsIndex = Backbone.CompositeView.extend({
     this.collection.each(this.addAlbumView.bind(this));
     this.listenTo(this.collection, 'remove', this.removeAlbumView);
 
-    var navBarView = new TwinkieSetApp.Views.NavBar({
+    var navBarView = new OneForSafetyApp.Views.NavBar({
       user: this.user
     });
     this.addSubview('nav', navBarView);
@@ -23,14 +23,14 @@ TwinkieSetApp.Views.AlbumsIndex = Backbone.CompositeView.extend({
   },
 
   openForm: function () {
-    var formView = new TwinkieSetApp.Views.Form({
+    var formView = new OneForSafetyApp.Views.Form({
       collection: this.collection
     });
     $('body').append(formView.render().$el);
   },
 
   addAlbumView: function (album) {
-    var subview = new TwinkieSetApp.Views.AlbumsIndexView({ model: album });
+    var subview = new OneForSafetyApp.Views.AlbumsIndexView({ model: album });
     this.addSubview('.albums', subview);
   },
 

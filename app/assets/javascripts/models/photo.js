@@ -1,3 +1,3 @@
-TwinkieSetApp.Models.Photo = Backbone.Model.extend({
+OneForSafetyApp.Models.Photo = Backbone.Model.extend({
   urlRoot: '/api/photos'
 });

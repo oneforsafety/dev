@@ -1,4 +1,4 @@
-TwinkieSetApp.Models.PublicAlbum = Backbone.Model.extend({
+OneForSafetyApp.Models.PublicAlbum = Backbone.Model.extend({
   urlRoot: function () {
     return "/api/users/" + this.userID + '/albums/' + this.albumID;
   },
@@ -22,7 +22,7 @@ TwinkieSetApp.Models.PublicAlbum = Backbone.Model.extend({
 
   subalbums: function () {
     if (!this._subalbums) {
-      this._subalbums = new TwinkieSetApp.Collections.PublicSubalbums([], {
+      this._subalbums = new OneForSafetyApp.Collections.PublicSubalbums([], {
         album: this,
         userID: this.userID
       });

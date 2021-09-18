@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PublicSubalbumPhotos = Backbone.CompositeView.extend({
+OneForSafetyApp.Views.PublicSubalbumPhotos = Backbone.CompositeView.extend({
   template: JST['public/04_public_subalbum_photos'],
 
   initialize: function () {
@@ -44,7 +44,7 @@ TwinkieSetApp.Views.PublicSubalbumPhotos = Backbone.CompositeView.extend({
   },
 
   addPhotoView: function (photo) {
-    var subview = new TwinkieSetApp.Views.PhotoItem({
+    var subview = new OneForSafetyApp.Views.PhotoItem({
       model: photo,
       collection: this.model.photos()
     });
@@ -71,7 +71,7 @@ TwinkieSetApp.Views.PublicSubalbumPhotos = Backbone.CompositeView.extend({
   },
 
   addMasonry: function (event) {
-    TwinkieSetApp.Views.sizing = function () {
+    OneForSafetyApp.Views.sizing = function () {
       var windowWidth = $(window).width() - 48;
 
       if (windowWidth > 1040) {
@@ -86,16 +86,16 @@ TwinkieSetApp.Views.PublicSubalbumPhotos = Backbone.CompositeView.extend({
     };
 
     $(window).resize(function () {
-      TwinkieSetApp.Views.sizing();
+      OneForSafetyApp.Views.sizing();
     });
 
     $('.grid-item').imagesLoaded(function () {
-      TwinkieSetApp.Views.sizing();
-      TwinkieSetApp.Views.masonryGallery = $('.public-subalbum-photos').masonry({
+      OneForSafetyApp.Views.sizing();
+      OneForSafetyApp.Views.masonryGallery = $('.public-subalbum-photos').masonry({
         itemSelector: '.grid-item',
         gutter: 6
       });
-      TwinkieSetApp.Views.masonryGallery.masonry();
+      OneForSafetyApp.Views.masonryGallery.masonry();
     });
   },
 });

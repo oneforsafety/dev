@@ -1,4 +1,4 @@
-TwinkieSetApp.Routers.Router = Backbone.Router.extend({
+OneForSafetyApp.Routers.Router = Backbone.Router.extend({
   routes: {
     "": "index", //  http://localhost:3000/admin#
     "collection/:id(/set/:subalbumId)": "show", //  http://localhost:3000/admin#collection/1/
@@ -10,8 +10,8 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.$rootEl = options.$rootEl;
     this.$rootElPublic = options.$rootElPublic;
-    this.collection = new TwinkieSetApp.Collections.Albums();
-    TwinkieSetApp.Views.defaultKeys = function () {
+    this.collection = new OneForSafetyApp.Collections.Albums();
+    OneForSafetyApp.Views.defaultKeys = function () {
       $('body').keydown(function (e) {
         if (e.keyCode === 27) {
           e.preventDefault();
@@ -23,10 +23,10 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
 
   index: function () {
     if (CURRENT_USER) { // this is important to prevent accessing current_user when it is null
-      var user = new TwinkieSetApp.Models.Owner({ id: CURRENT_USER.id });
+      var user = new OneForSafetyApp.Models.Owner({ id: CURRENT_USER.id });
       user.fetch();
       this.collection.fetch();
-      var indexView = new TwinkieSetApp.Views.AlbumsIndex({
+      var indexView = new OneForSafetyApp.Views.AlbumsIndex({
         collection: this.collection,
         user: user
       });
@@ -35,10 +35,10 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
   },
 
   show: function (id, subalbumID) {
-    var user = new TwinkieSetApp.Models.Owner({ id: CURRENT_USER.id });
+    var user = new OneForSafetyApp.Models.Owner({ id: CURRENT_USER.id });
     user.fetch();
     var album = this.collection.getOrFetch(id);
-    var showView = new TwinkieSetApp.Views.AlbumsShow({
+    var showView = new OneForSafetyApp.Views.AlbumsShow({
       model: album,
       subalbumID: subalbumID,
       user: user
@@ -54,22 +54,22 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
   },
 
   publicUnavailable: function (user_id) {
-    var owner = new TwinkieSetApp.Models.PublicOwner({
+    var owner = new OneForSafetyApp.Models.PublicOwner({
       userID: user_id
     });
     owner.fetch();
-    var unavailableView = new TwinkieSetApp.Views.Unavailable({
+    var unavailableView = new OneForSafetyApp.Views.Unavailable({
       owner: owner
     });
     this._swapViewPublic(unavailableView);
   },
 
   publicIndex: function (user_id) {
-    this.owner = new TwinkieSetApp.Models.PublicOwner({
+    this.owner = new OneForSafetyApp.Models.PublicOwner({
       userID: user_id
     });
     this.owner.fetch();
-    var userIndex = new TwinkieSetApp.Views.PublicAlbumIndex({
+    var userIndex = new OneForSafetyApp.Views.PublicAlbumIndex({
       model: this.owner,
     });
 
@@ -77,7 +77,7 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
   },
 
   publicShow: function(user_id, album_id, set_id) {
-    var album_owner = new TwinkieSetApp.Models.PublicOwner({
+    var album_owner = new OneForSafetyApp.Models.PublicOwner({
       userID: user_id
     });
     album_owner.fetch({
@@ -86,7 +86,7 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
           window.location.href = "/users#" + user_id + "/unavailable";
           return
         } else {
-          var album = new TwinkieSetApp.Models.PublicAlbum({
+          var album = new OneForSafetyApp.Models.PublicAlbum({
             userID: user_id,
             albumID: album_id
           });
@@ -99,7 +99,7 @@ TwinkieSetApp.Routers.Router = Backbone.Router.extend({
             }
           });
 
-          var showView = new TwinkieSetApp.Views.PublicAlbumShow({
+          var showView = new OneForSafetyApp.Views.PublicAlbumShow({
             album_owner: album_owner,
             album: album,
             setID: set_id

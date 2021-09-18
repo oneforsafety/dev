@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PhotoItem = Backbone.View.extend({
+OneForSafetyApp.Views.PhotoItem = Backbone.View.extend({
   template: JST['public/05_public_photo_item'],
   className: 'grid-item',
 
@@ -7,7 +7,7 @@ TwinkieSetApp.Views.PhotoItem = Backbone.View.extend({
   },
 
   displayModal: function (event) {
-    var content = new TwinkieSetApp.Views.PhotoItemModal({
+    var content = new OneForSafetyApp.Views.PhotoItemModal({
       model: this.model,
       collection: this.collection
     });
@@ -21,17 +21,17 @@ TwinkieSetApp.Views.PhotoItem = Backbone.View.extend({
     this.$el.html(content);
     this.$el.css('opacity', 0.4);
 
-    if (TwinkieSetApp.Views.masonryGallery) {
+    if (OneForSafetyApp.Views.masonryGallery) {
       $('.grid-item').imagesLoaded( function() {
-        if (TwinkieSetApp.Views.sizing) {
-          TwinkieSetApp.Views.sizing();
+        if (OneForSafetyApp.Views.sizing) {
+          OneForSafetyApp.Views.sizing();
         }
-        TwinkieSetApp.Views.masonryGallery.masonry();
-        TwinkieSetApp.Views.masonryGallery.masonry('appended', this.$el);
+        OneForSafetyApp.Views.masonryGallery.masonry();
+        OneForSafetyApp.Views.masonryGallery.masonry('appended', this.$el);
         this.$el.css('opacity', 1);
 
 
-        TwinkieSetApp.Views.masonryGallery.masonry();
+        OneForSafetyApp.Views.masonryGallery.masonry();
       }.bind(this));
     }
 

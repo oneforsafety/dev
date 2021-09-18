@@ -1,4 +1,4 @@
-TwinkieSetApp.Views.PhotosModal = Backbone.View.extend({
+OneForSafetyApp.Views.PhotosModal = Backbone.View.extend({
   template: JST['admin_forms/photos_modal'],
   className: 'gallery-modal',
 
@@ -64,9 +64,9 @@ TwinkieSetApp.Views.PhotosModal = Backbone.View.extend({
       }
     });
 
-    var photoItem = new TwinkieSetApp.Views.PhotosModal({
+    var photoItem = new OneForSafetyApp.Views.PhotosModal({
       model: nextImage,
-      collection: TwinkieSetApp.selectedPhotosArr,
+      collection: OneForSafetyApp.selectedPhotosArr,
       position: newIndex
 
     });

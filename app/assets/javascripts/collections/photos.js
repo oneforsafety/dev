@@ -1,6 +1,6 @@
-TwinkieSetApp.Collections.Photos = Backbone.Collection.extend({
+OneForSafetyApp.Collections.Photos = Backbone.Collection.extend({
   url: '/api/photos',
-  model: TwinkieSetApp.Models.Photo,
+  model: OneForSafetyApp.Models.Photo,
 
   comparator: function (photo) {
     return photo.get('order');
@@ -12,7 +12,7 @@ TwinkieSetApp.Collections.Photos = Backbone.Collection.extend({
     if (photo) {
       photo.fetch();
     } else {
-      photo = new TwinkieSetApp.Models.PublicAlbum({ id: id });
+      photo = new OneForSafetyApp.Models.PublicAlbum({ id: id });
       photo.fetch({
         success: function () {
           this.add(photo);

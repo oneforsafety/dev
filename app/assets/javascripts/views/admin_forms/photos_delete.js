@@ -1,9 +1,9 @@
-TwinkieSetApp.Views.PhotosDelete = Backbone.View.extend({
+OneForSafetyApp.Views.PhotosDelete = Backbone.View.extend({
   template: JST['admin_forms/photos_delete'],
   className: 'form-modal',
 
   initialize: function (options) {
-    TwinkieSetApp.Views.defaultKeys.call(this);
+    OneForSafetyApp.Views.defaultKeys.call(this);
     $('body').keydown(function (e) {
       if (e.keyCode === 13) {
         e.preventDefault();
@@ -19,10 +19,10 @@ TwinkieSetApp.Views.PhotosDelete = Backbone.View.extend({
   },
 
   deletePhotos: function () {
-    ((TwinkieSetApp.selectedPhotosArr)).forEach(function (photoModel) {
+    ((OneForSafetyApp.selectedPhotosArr)).forEach(function (photoModel) {
       photoModel.destroy({
         success: function () {
-          TwinkieSetApp.selectedPhotosArr = [];
+          OneForSafetyApp.selectedPhotosArr = [];
           $('.number-of-selected').html("0 selected");
           $('.album-show-sidebar-subalbums-li').trigger('resetSubalbumPhotoCount');
         }.bind(this),
