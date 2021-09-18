@@ -1,4 +1,4 @@
-class CreateSubalbums < ActiveRecord::Migration
+class CreateSubalbums < ActiveRecord::Migration[5.1]
   def change
     create_table :subalbums do |t|
       t.string :title,     null: false
