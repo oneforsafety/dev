@@ -35,7 +35,6 @@ oneForSafety is a client photo gallery for modern photographers, built on Rails 
 - [x] Photos can be sorted by name, upload date, date taken, and randomly.
 
 ## Design Docs
-* [View Wireframes][views]
 * [DB schema][schema]
 
 [schema]: ./docs/schema.md
