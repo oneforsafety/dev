@@ -3,15 +3,15 @@
     <a href="/"><img src="https://next.oneforsafety.com/apps/files_sharing/publicpreview/cxBjoyJ8EMQms27?x=3360&y=1040&a=true&file=ofs.png" height="32px" class="pull-left"></a>
 
     <ul class="options pull-right">
-      <li class="root-link current">/root</li>
+      <li class="welcome-link current">Welcome</li>
 
-      <li class="install-link">/install</li>
+      <li class="design-link">Design</li>
 
-      <li class="pricing-link">/pricing</li>
+      <li class="examples-link">Examples</li>
 
       <% if logged_in? %>
         <li class="open-dash">
-          <a href="/admin">Open oneForSafety</a>
+          <a href="/admin">Open Dashboard</a>
         </li>
       <% else %>
         <li class="open-login">
@@ -26,10 +26,10 @@
 
   <div class="row">
     <div class="col-sm-12">
-      <h1 class="landing-title">oneForSafety.io</h1>
-      <h2 class="tag-line">Creator, meet cloud. All your drives are belong to us. Cull, collaborate, host, and share.</h2>
+      <h1 class="landing-title">UNLOCK ACCESS TO ALL THE PHOTOS</h1>
+      <h2 class="tag-line">Cull, host, share, and deliver galleries.</h2>
       <div class="get-started-guest"><%= link_to 'Guest Login', new_session_url(demo: "true"), { method: "get", class: "guest-login-button", id: "guest-login-button"} %></div>
-      <div class="check-out-demo">Claim your free 10GB or try a guest account.</div>
+      <div class="check-out-demo">Claim your 10GB free or try out a guest account.</div>
     </div>
     <div class="down-arrow moved">
       <div class="left-side"></div><div class="right-side"></div>
