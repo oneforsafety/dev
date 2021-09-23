@@ -38,7 +38,6 @@ oneForSafety is a client photo gallery for modern photographers, built on Rails 
 * [View Wireframes][views]
 * [DB schema][schema]
 
-[views]: ./docs/views.md
 [schema]: ./docs/schema.md
 
 —
